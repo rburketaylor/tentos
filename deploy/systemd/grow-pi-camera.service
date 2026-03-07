@@ -1,0 +1,15 @@
+[Unit]
+Description=Grow Pi Camera Node
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/grow-pi-camera.env
+WorkingDirectory=/opt/grow
+ExecStart=/opt/grow/.venv/bin/grow-pi-camera
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
