@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Camera State",
+  "type": "object",
+  "required": ["camera_id", "status", "stream_url", "timestamp"],
+  "properties": {
+    "camera_id": { "type": "string" },
+    "status": { "enum": ["online", "offline", "degraded"] },
+    "stream_url": { "type": "string", "format": "uri" },
+    "snapshot_url": { "type": "string", "format": "uri" },
+    "timestamp": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

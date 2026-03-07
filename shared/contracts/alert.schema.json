@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Alert",
+  "type": "object",
+  "required": ["id", "source", "level", "message", "created_at"],
+  "properties": {
+    "id": { "type": "string" },
+    "source": { "type": "string" },
+    "level": { "enum": ["info", "warning", "critical"] },
+    "message": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

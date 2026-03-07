@@ -1,0 +1,22 @@
+version: 1
+http:
+  base_path: /api/v1
+  resources:
+    - devices
+    - schedules
+    - alerts
+    - cameras
+    - media
+mqtt:
+  device_topics:
+    telemetry: grow/{node_id}/telemetry
+    state: grow/{node_id}/state
+    command: grow/{node_id}/command
+    availability: grow/{node_id}/availability
+  camera_topics:
+    state: grow/camera/{camera_id}/state
+    event: grow/camera/{camera_id}/event
+notes:
+  - ESP32 owns direct IO and local failsafe behavior.
+  - Backend owns orchestration, history, and operator actions.
+  - Pi camera publishes camera health plus media metadata.

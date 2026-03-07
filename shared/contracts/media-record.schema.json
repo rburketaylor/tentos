@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Media Record",
+  "type": "object",
+  "required": ["id", "camera_id", "kind", "url", "created_at"],
+  "properties": {
+    "id": { "type": "string" },
+    "camera_id": { "type": "string" },
+    "kind": { "enum": ["snapshot", "stream"] },
+    "url": { "type": "string", "format": "uri" },
+    "created_at": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

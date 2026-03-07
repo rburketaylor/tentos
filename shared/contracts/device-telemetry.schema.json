@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Device Telemetry",
+  "type": "object",
+  "required": ["node_id", "temperature_c", "humidity_rh", "status", "timestamp"],
+  "properties": {
+    "node_id": { "type": "string" },
+    "temperature_c": { "type": "number" },
+    "humidity_rh": { "type": "number" },
+    "moisture_pct": { "type": "number" },
+    "status": { "enum": ["online", "offline", "degraded"] },
+    "timestamp": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}
