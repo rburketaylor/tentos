@@ -1,0 +1,46 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+.venv/
+venv/
+*.sqlite3
+*.egg-info/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.next/
+coverage/
+playwright-report/
+test-results/
+
+# Logs
+*.log
+
+# Embedded / platform tooling
+.pio/
+.pioenvs/
+firmware/esp32-controller/include/controller_config.local.h
+
+# Local IDE state
+.vscode/
+
+# Obsidian local state
+vault/.obsidian/workspace.json
+vault/.obsidian/workspaces.json

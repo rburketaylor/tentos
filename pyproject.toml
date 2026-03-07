@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=82", "wheel>=0.46"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grow-monorepo"
+version = "0.1.0"
+description = "Root tooling and test configuration for the grow monorepo."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.28,<0.29",
+  "jsonschema>=4.26,<5",
+  "pytest>=9.0,<10",
+  "pytest-cov>=7.0,<8",
+  "ruff>=0.15,<0.16"
+]
+
+[tool.setuptools]
+py-modules = []
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = [
+  "apps/backend/src",
+  "nodes/pi-camera/src"
+]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
