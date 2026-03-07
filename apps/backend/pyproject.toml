@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=82", "wheel>=0.46"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grow-backend"
+version = "0.1.0"
+description = "Home-server backend for the grow project."
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.135,<0.136",
+  "pydantic>=2.12,<3",
+  "uvicorn[standard]>=0.40,<0.41"
+]
+
+[project.scripts]
+grow-backend = "grow_backend.main:run"
+
+[tool.setuptools.packages.find]
+where = ["src"]
