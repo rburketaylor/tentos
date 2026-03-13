@@ -9,10 +9,12 @@
     "dev:web": "npm --workspace apps/web run dev",
     "test:web": "npm --workspace apps/web run test",
     "typecheck:web": "npm --workspace apps/web run typecheck",
+    "typecheck:e2e": "tsc --noEmit -p tsconfig.playwright.json",
     "test:e2e": "playwright test"
   },
   "devDependencies": {
     "@playwright/test": "^1.52.0",
+    "@types/node": "^24.12.0",
     "typescript": "^5.8.2"
   }
 }
