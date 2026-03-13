@@ -15,7 +15,7 @@ The repo root is now the software monorepo for the grow project.
 - ESP32 controller node: firmware for direct IO, local schedules, and failsafe behavior
 - Pi camera node: Raspberry Pi OS Lite service for USB camera capture and camera status
 
-The `vault/` directory remains the planning and documentation layer, while the repo root holds the actual code and deployment assets.
+The `docs/vault/` directory remains the planning and documentation layer, while the repo root holds the actual code and deployment assets.
 
 ## Current repo shape
 

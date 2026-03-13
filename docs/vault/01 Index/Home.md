@@ -28,7 +28,7 @@ This vault is the current planning and reference layer for the grow build. The n
 
 ## Current defaults
 
-- Use a dedicated `vault/` subdirectory for planning; keep the repo root for code, firmware, and webserver work.
+- Use a dedicated `docs/vault/` subdirectory for planning; keep the repo root for code, firmware, and webserver work.
 - Use a home server or main application host for automation and monitoring logic.
 - Use an ESP32-class board as the hardware controller node.
 - For this build, include a Raspberry Pi camera node in v1 because video monitoring is part of the setup.
