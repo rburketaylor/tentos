@@ -10,7 +10,7 @@ This repository holds the software side of the grow project:
 - `shared/fixtures`: canonical payloads for tests and simulators
 - `deploy/compose/home-server`: Docker Compose stack for the home server
 
-The `vault/` directory remains the planning and documentation layer.
+The `docs/vault/` directory remains the planning and documentation layer.
 
 ## Quick Start
 

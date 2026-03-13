@@ -42,5 +42,5 @@ firmware/esp32-controller/include/controller_config.local.h
 .vscode/
 
 # Obsidian local state
-vault/.obsidian/workspace.json
-vault/.obsidian/workspaces.json
+docs/vault/.obsidian/workspace.json
+docs/vault/.obsidian/workspaces.json

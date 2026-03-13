@@ -1,7 +1,7 @@
 ## Project Scope
 
 - This repo is the grow project software monorepo.
-- `vault/` is the curated planning and documentation layer.
+- `docs/vault/` is the curated planning and documentation layer.
 - The code and deployment assets live at the repo root:
   - `apps/backend`: FastAPI home-server API, automation, alerts, MQTT bridge, and seeded repository data
   - `apps/web`: React/Vite operator dashboard
@@ -17,7 +17,7 @@
 
 ## Working Rules
 
-- Preserve the current documentation-specific guidance below when editing `vault/`.
+- Preserve the current documentation-specific guidance below when editing `docs/vault/`.
 - Prefer updating the real source files over generated artifacts.
 - If an important CLI command hangs or stalls and missing networking, sandbox access, or other permissions could plausibly be the cause, default to asking for the needed permissions first instead of spending time on workaround paths. Only chase other explanations first when there is concrete evidence the issue is not permission-related.
 - Avoid editing build output and dependency directories unless the task explicitly requires it:
@@ -66,12 +66,12 @@
 
 ## Vault Documentation Rules
 
-- Treat changes under `vault/` as curated documentation work, not isolated file edits.
-- If you add, move, rename, merge, split, or materially rewrite any `vault/**/*.md` note, update links so the vault stays navigable.
+- Treat changes under `docs/vault/` as curated documentation work, not isolated file edits.
+- If you add, move, rename, merge, split, or materially rewrite any `docs/vault/**/*.md` note, update links so the vault stays navigable.
 - Check both directions:
   - outbound links in the edited note
   - inbound links from related notes, indexes, and overview pages
 - Update `Related notes` sections where appropriate.
-- Update index notes such as `vault/01 Index/Home.md` when a note should be discoverable from the main entry points.
-- If a note is moved out of `vault/00 Inbox/`, remove or replace the inbox copy so there is a single canonical version.
+- Update index notes such as `docs/vault/01 Index/Home.md` when a note should be discoverable from the main entry points.
+- If a note is moved out of `docs/vault/00 Inbox/`, remove or replace the inbox copy so there is a single canonical version.
 - Before finishing, verify that any `[[wikilinks]]` you added or changed resolve to existing notes and that no obvious orphaned docs were created by the edit.
