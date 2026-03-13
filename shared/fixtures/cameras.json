@@ -1,0 +1,10 @@
+[
+  {
+    "id": "pi-camera-01",
+    "name": "Tent Canopy Cam",
+    "status": "online",
+    "stream_url": "http://127.0.0.1:8100/stream",
+    "last_snapshot_url": null,
+    "last_seen": "2026-03-06T12:00:00Z"
+  }
+]

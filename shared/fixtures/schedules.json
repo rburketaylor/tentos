@@ -1,0 +1,11 @@
+[
+  {
+    "id": "feed-veg-am",
+    "device_id": "tent-controller-01",
+    "name": "Morning Feed",
+    "enabled": true,
+    "start_time": "08:00",
+    "duration_seconds": 18,
+    "description": "Primary irrigation pulse for vegetative schedule."
+  }
+]

@@ -7,6 +7,12 @@ http:
     - alerts
     - cameras
     - media
+  response_schemas:
+    devices: shared/contracts/devices.response.schema.json
+    schedules: shared/contracts/schedules.response.schema.json
+    alerts: shared/contracts/alerts.response.schema.json
+    cameras: shared/contracts/cameras.response.schema.json
+    media: shared/contracts/media.response.schema.json
 mqtt:
   device_topics:
     telemetry: grow/{node_id}/telemetry

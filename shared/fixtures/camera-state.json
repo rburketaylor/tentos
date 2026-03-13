@@ -1,7 +1,6 @@
 {
   "camera_id": "pi-camera-01",
   "status": "online",
-  "stream_url": "http://pi-camera.local:8100/stream",
-  "snapshot_url": "http://pi-camera.local:8100/snapshots/latest.jpg",
+  "stream_url": "http://127.0.0.1:8100/stream",
   "timestamp": "2026-03-06T12:00:00Z"
 }

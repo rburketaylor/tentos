@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Devices Response",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "status", "temperature_c", "humidity_rh", "last_seen"],
+    "properties": {
+      "id": { "type": "string" },
+      "name": { "type": "string" },
+      "status": { "enum": ["online", "offline", "degraded"] },
+      "temperature_c": { "type": "number" },
+      "humidity_rh": { "type": "number" },
+      "moisture_pct": { "type": ["number", "null"] },
+      "active_schedule_id": { "type": ["string", "null"] },
+      "last_seen": { "type": "string", "format": "date-time" }
+    },
+    "additionalProperties": false
+  }
+}

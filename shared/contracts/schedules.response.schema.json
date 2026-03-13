@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schedules Response",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "device_id",
+      "name",
+      "enabled",
+      "start_time",
+      "duration_seconds",
+      "description"
+    ],
+    "properties": {
+      "id": { "type": "string" },
+      "device_id": { "type": "string" },
+      "name": { "type": "string" },
+      "enabled": { "type": "boolean" },
+      "start_time": { "type": "string" },
+      "duration_seconds": { "type": "integer" },
+      "description": { "type": "string" }
+    },
+    "additionalProperties": false
+  }
+}

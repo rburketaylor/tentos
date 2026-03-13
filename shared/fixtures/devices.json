@@ -1,0 +1,12 @@
+[
+  {
+    "id": "tent-controller-01",
+    "name": "Tent Controller",
+    "status": "online",
+    "temperature_c": 24.3,
+    "humidity_rh": 59.1,
+    "moisture_pct": 42.0,
+    "active_schedule_id": "feed-veg-am",
+    "last_seen": "2026-03-06T12:00:00Z"
+  }
+]

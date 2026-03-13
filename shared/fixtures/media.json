@@ -1,0 +1,9 @@
+[
+  {
+    "id": "media-001",
+    "camera_id": "pi-camera-01",
+    "kind": "stream",
+    "url": "http://127.0.0.1:8100/stream",
+    "created_at": "2026-03-06T12:00:00Z"
+  }
+]

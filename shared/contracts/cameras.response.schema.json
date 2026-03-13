@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cameras Response",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "status", "stream_url", "last_seen"],
+    "properties": {
+      "id": { "type": "string" },
+      "name": { "type": "string" },
+      "status": { "enum": ["online", "offline", "degraded"] },
+      "stream_url": { "type": "string", "format": "uri" },
+      "last_snapshot_url": { "type": ["string", "null"], "format": "uri" },
+      "last_seen": { "type": "string", "format": "date-time" }
+    },
+    "additionalProperties": false
+  }
+}
