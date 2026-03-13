@@ -3,11 +3,13 @@ FROM node:22-alpine AS build
 WORKDIR /app
 
 COPY package.json package.json
+COPY package-lock.json package-lock.json
 COPY tsconfig.base.json tsconfig.base.json
 COPY apps/web/package.json apps/web/package.json
 COPY apps/web apps/web
+COPY shared/fixtures shared/fixtures
 
-RUN npm install
+RUN npm ci
 RUN npm --workspace apps/web run build
 
 FROM nginx:1.27-alpine

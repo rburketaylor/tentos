@@ -5,6 +5,8 @@ Wants=network-online.target
 
 [Service]
 Type=simple
+User=grow
+Group=grow
 EnvironmentFile=/etc/grow-pi-camera.env
 WorkingDirectory=/opt/grow
 ExecStart=/opt/grow/.venv/bin/grow-pi-camera

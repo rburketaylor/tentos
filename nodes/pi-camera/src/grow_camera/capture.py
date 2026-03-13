@@ -1,7 +1,7 @@
 from grow_camera.config import settings
 
 
-def current_state() -> dict[str, str]:
+def current_state() -> dict[str, str | None]:
     return {
         "camera_id": settings.camera_id,
         "status": "online",

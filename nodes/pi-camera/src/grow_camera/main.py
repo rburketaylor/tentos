@@ -25,7 +25,7 @@ def stream():
 
 
 def run() -> None:
-    uvicorn.run("grow_camera.main:app", host="0.0.0.0", port=8100, reload=False)
+    uvicorn.run(app, host="0.0.0.0", port=8100, reload=False)
 
 
 if __name__ == "__main__":

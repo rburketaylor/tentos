@@ -19,13 +19,13 @@ The `vault/` directory remains the planning and documentation layer.
 ```bash
 python -m venv .venv
 .venv/bin/python -m pip install -e '.[dev]' -e apps/backend -e nodes/pi-camera
-.venv/bin/uvicorn grow_backend.main:app --app-dir apps/backend/src --reload
+.venv/bin/uvicorn grow_backend.main:app --reload
 ```
 
 In another shell:
 
 ```bash
-.venv/bin/uvicorn grow_camera.main:app --app-dir nodes/pi-camera/src --reload --port 8100
+.venv/bin/uvicorn grow_camera.main:app --reload --port 8100
 ```
 
 ### Web app
@@ -34,6 +34,8 @@ In another shell:
 npm install
 npm --workspace apps/web run dev
 ```
+
+Set `VITE_USE_SEEDED_DATA=true` when you want the dashboard to run against the repo's shared seed fixtures instead of live API responses.
 
 ### Firmware
 
@@ -75,3 +77,5 @@ npm run test:e2e
 ## Repo Tasks
 
 The root [`justfile`](/home/burket/Git/tentos/justfile) contains the common local commands for backend, web, firmware, simulators, and Docker Compose.
+
+The Compose stack intentionally exposes only the web tier and runs the backend in seeded mode until database and MQTT integrations are implemented in the application layer.

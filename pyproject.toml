@@ -23,10 +23,6 @@ py-modules = []
 
 [tool.pytest.ini_options]
 addopts = "-q"
-pythonpath = [
-  "apps/backend/src",
-  "nodes/pi-camera/src"
-]
 testpaths = ["tests"]
 
 [tool.ruff]

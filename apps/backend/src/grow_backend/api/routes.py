@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 
 from grow_backend.automation.service import get_status
+from grow_backend.config import settings
 from grow_backend.storage.repository import repository
 
 router = APIRouter(prefix="/api/v1")
@@ -36,4 +37,5 @@ def api_health():
     return {
         "summary": repository.health(),
         "automation": get_status(),
+        "repository_mode": settings.repository_mode,
     }

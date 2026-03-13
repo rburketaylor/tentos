@@ -13,4 +13,7 @@ Start simple. Keep the real camera capture implementation behind the service bou
 1. Install Python 3.11+ and create a virtualenv.
 2. Install the camera node package with `pip install -e /path/to/repo/nodes/pi-camera`.
 3. Copy [`camera.env.example`](/home/burket/Git/tentos/deploy/pi-camera/camera.env.example) to `/etc/grow-pi-camera.env`.
-4. Install the systemd unit from [`deploy/systemd/grow-pi-camera.service`](/home/burket/Git/tentos/deploy/systemd/grow-pi-camera.service).
+4. Create a dedicated `grow` service account and make `/opt/grow` readable by that user.
+5. Install the systemd unit from [`deploy/systemd/grow-pi-camera.service`](/home/burket/Git/tentos/deploy/systemd/grow-pi-camera.service).
+
+Leave `CAMERA_SNAPSHOT_URL` unset until the node exposes a real snapshot endpoint.

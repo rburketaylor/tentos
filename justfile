@@ -10,16 +10,16 @@ install-web:
     npm install
 
 backend:
-    .venv/bin/uvicorn grow_backend.main:app --app-dir apps/backend/src --reload --port 8000
+    .venv/bin/uvicorn grow_backend.main:app --reload --port 8000
 
 camera:
-    .venv/bin/uvicorn grow_camera.main:app --app-dir nodes/pi-camera/src --reload --port 8100
+    .venv/bin/uvicorn grow_camera.main:app --reload --port 8100
 
 web:
     npm --workspace apps/web run dev
 
 compose:
-    docker compose -f deploy/compose/home-server/docker-compose.yml up --build
+    docker compose --env-file deploy/compose/home-server/.env.example -f deploy/compose/home-server/docker-compose.yml up --build
 
 sim-controller:
     python scripts/sim/fake_controller.py
