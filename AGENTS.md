@@ -20,6 +20,8 @@
 - Preserve the current documentation-specific guidance below when editing `docs/vault/`.
 - Prefer updating the real source files over generated artifacts.
 - If an important CLI command hangs or stalls and missing networking, sandbox access, or other permissions could plausibly be the cause, default to asking for the needed permissions first instead of spending time on workaround paths. Only chase other explanations first when there is concrete evidence the issue is not permission-related.
+- If Git staging, diffing the index, or committing fails with `.git/index.lock` or a read-only filesystem error, rerun the Git command with escalated permissions. In this environment, repository metadata writes under `.git/` may be blocked by the sandbox even when normal file edits are allowed.
+- Do not assume `pre-commit` is runnable from the default shell PATH just because a pyenv shim exists. If hook execution matters, verify the executable and config first; a shim-only `pre-commit` failure is separate from sandbox permission issues.
 - Avoid editing build output and dependency directories unless the task explicitly requires it:
   - `apps/web/dist`
   - `node_modules`
