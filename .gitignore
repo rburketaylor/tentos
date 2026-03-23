@@ -37,6 +37,9 @@ test-results/
 .pio/
 .pioenvs/
 firmware/esp32-controller/include/controller_config.local.h
+*.kicad_prl
+fp-info-cache
+*-backups/
 
 # Local IDE state
 .vscode/
