@@ -26,6 +26,10 @@ This vault is the current planning and reference layer for the grow build. The n
 - [[50 Parts/Current Inventory]]
 - [[50 Parts/Shopping List]]
 
+## Implementation plan
+
+- [Implementation Roadmap](../../plans/implementation-roadmap.md) — Phased roadmap for completing all unimplemented features
+
 ## Current defaults
 
 - Use a dedicated `docs/vault/` subdirectory for planning; keep the repo root for code, firmware, and webserver work.
