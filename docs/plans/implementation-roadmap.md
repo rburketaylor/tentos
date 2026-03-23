@@ -2,6 +2,8 @@
 
 Phased plan to complete the grow automation system. Tasks ordered by dependency and user priority.
 
+See also: [Current State Assessment (2026-03-23)](./current-state-assessment-2026-03-23.md) for a snapshot of what is already implemented, what is still placeholder-level, and where the plan currently diverges from the codebase.
+
 ---
 
 ## Phase 1 — Protocol & Schema Alignment (Critical Path)
