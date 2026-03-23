@@ -41,3 +41,6 @@ firmware-build:
 
 firmware-test:
     pio test -d firmware/esp32-controller -e native
+
+firmware-compiledb:
+    pio run -t compiledb -d firmware/esp32-controller
