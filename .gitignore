@@ -48,3 +48,6 @@ fp-info-cache
 # Obsidian local state
 docs/vault/.obsidian/workspace.json
 docs/vault/.obsidian/workspaces.json
+
+# Local agent state
+.kilo/
