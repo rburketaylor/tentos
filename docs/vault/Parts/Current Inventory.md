@@ -53,8 +53,8 @@ This note tracks parts already on hand. It is seeded from the hardware explicitl
 
 ## Related notes
 
-- [[50 Parts/Shopping List]]
-- [[10 Planning/Budget Shopping Guide]]
-- [[20 Hardware/Controller Architecture]]
-- [[20 Hardware/Camera and Network Options]]
-- [[10 Planning/Software and Monorepo Layout]]
+- [[Parts/Shopping List]]
+- [[Planning/Budget Shopping Guide]]
+- [[Hardware/Controller Architecture]]
+- [[Hardware/Camera and Network Options]]
+- [[Planning/Software and Monorepo Layout]]

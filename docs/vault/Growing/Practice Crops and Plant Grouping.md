@@ -42,5 +42,5 @@ Use short-cycle practice crops to debug lighting, airflow, and watering before r
 
 ## Related notes
 
-- [[10 Planning/Current Recommended Build]]
-- [[30 Growing/Environment Targets]]
+- [[Planning/Current Recommended Build]]
+- [[Growing/Environment Targets]]

@@ -11,7 +11,7 @@ region: CA
 
 The repo root is now the software monorepo for the grow project.
 
-- Home server stack: backend API, scheduling and alerts, MQTT broker, database, web dashboard
+- Home server stack: backend API, scheduling and alerts, web dashboard (MQTT broker and persistence are planned, not in compose yet)
 - ESP32 controller node: firmware for direct IO, local schedules, and failsafe behavior
 - Pi camera node: Raspberry Pi OS Lite service for USB camera capture and camera status
 
@@ -25,12 +25,14 @@ apps/web                      TypeScript dashboard
 firmware/esp32-controller     PlatformIO firmware project
 nodes/pi-camera               Pi camera service
 shared/contracts              Protocol definitions and topic naming
-shared/fixtures               Canonical payload samples for tests and simulation
-deploy/compose/home-server    Main Docker Compose stack
+shared/fixtures               Canonical payload samples for tests and fixture dumps
+deploy/compose/home-server    Docker Compose (backend + web)
 deploy/pi-camera              Pi deployment notes and env example
 deploy/systemd                Service units for Pi or host installs
-scripts/sim                   Fake controller and fake camera publishers
+scripts/sim                   Print controller/camera fixture JSON (not MQTT)
 tests                         Integration, contract, firmware, and E2E coverage
+docs/plans                    Roadmaps and assessments outside the vault
+models                        Hardware CAD assets (optional)
 ```
 
 ## Current defaults
@@ -50,8 +52,8 @@ tests                         Integration, contract, firmware, and E2E coverage
 
 ## Related notes
 
-- [[01 Index/Home]]
-- [[10 Planning/Current Recommended Build]]
-- [[20 Hardware/Controller Architecture]]
-- [[20 Hardware/Camera and Network Options]]
-- [[50 Parts/Current Inventory]]
+- [[Index/Home]]
+- [[Planning/Current Recommended Build]]
+- [[Hardware/Controller Architecture]]
+- [[Hardware/Camera and Network Options]]
+- [[Parts/Current Inventory]]

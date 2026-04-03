@@ -70,7 +70,7 @@ If RH > 65% -> humidifier OFF
 
 ## Related notes
 
-- [[20 Hardware/Controller Architecture]]
-- [[20 Hardware/RF Outlet Remote Hack]]
-- [[20 Hardware/Irrigation Architecture]]
-- [[30 Growing/Tent Build and Safety]]
+- [[Hardware/Controller Architecture]]
+- [[Hardware/RF Outlet Remote Hack]]
+- [[Hardware/Irrigation Architecture]]
+- [[Growing/Tent Build and Safety]]

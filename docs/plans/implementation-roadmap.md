@@ -273,7 +273,7 @@ See also: [Current State Assessment (2026-03-23)](./current-state-assessment-202
 
 ### 6.3 Backend: Environment automation
 
-- Automation module: read temp/RH thresholds from config (initial targets from `docs/vault/30 Growing/Environment Targets.md`)
+- Automation module: read temp/RH thresholds from config (initial targets from `docs/vault/Growing/Environment Targets.md`)
 - Compare against live MQTT telemetry
 - Publish `fan_on`/`fan_off` on threshold crossings
 - Hysteresis (fan on at 28°C, off at 26°C)

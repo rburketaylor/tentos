@@ -11,20 +11,21 @@ This vault is the current planning and reference layer for the grow build. The n
 
 ## Start here
 
-- [[10 Planning/Current Recommended Build]]
-- [[10 Planning/Software and Monorepo Layout]]
-- [[10 Planning/Budget Shopping Guide]]
-- [[20 Hardware/Controller Architecture]]
-- [[20 Hardware/Camera and Network Options]]
-- [[20 Hardware/Irrigation Architecture]]
-- [[20 Hardware/Power and Protection]]
-- [[20 Hardware/RF Outlet Remote Hack]]
-- [[30 Growing/Environment Targets]]
-- [[30 Growing/Odor, Drying, and Storage]]
-- [[30 Growing/Tent Build and Safety]]
-- [[30 Growing/Practice Crops and Plant Grouping]]
-- [[50 Parts/Current Inventory]]
-- [[50 Parts/Shopping List]]
+- [[Planning/Current Recommended Build]]
+- [[Planning/Software and Monorepo Layout]]
+- [[Planning/Budget Shopping Guide]]
+- [[Hardware/Controller Architecture]]
+- [[Hardware/Camera and Network Options]]
+- [[Hardware/Irrigation Architecture]]
+- [[Hardware/Power and Protection]]
+- [[Hardware/RF Outlet Remote Hack]]
+- [[Growing/Coco Coir Grow Guide]]
+- [[Growing/Environment Targets]]
+- [[Growing/Odor, Drying, and Storage]]
+- [[Growing/Tent Build and Safety]]
+- [[Growing/Practice Crops and Plant Grouping]]
+- [[Parts/Current Inventory]]
+- [[Parts/Shopping List]]
 
 ## Implementation plan
 

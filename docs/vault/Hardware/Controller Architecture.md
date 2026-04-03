@@ -65,10 +65,10 @@ Pi camera node ---------- camera stream / snapshots
 
 ## Related notes
 
-- [[10 Planning/Current Recommended Build]]
-- [[10 Planning/Software and Monorepo Layout]]
-- [[10 Planning/Budget Shopping Guide]]
-- [[20 Hardware/Camera and Network Options]]
-- [[20 Hardware/Power and Protection]]
-- [[20 Hardware/Irrigation Architecture]]
-- [[20 Hardware/RF Outlet Remote Hack]]
+- [[Planning/Current Recommended Build]]
+- [[Planning/Software and Monorepo Layout]]
+- [[Planning/Budget Shopping Guide]]
+- [[Hardware/Camera and Network Options]]
+- [[Hardware/Power and Protection]]
+- [[Hardware/Irrigation Architecture]]
+- [[Hardware/RF Outlet Remote Hack]]

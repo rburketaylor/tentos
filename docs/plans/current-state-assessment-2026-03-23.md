@@ -26,9 +26,9 @@ The current planning layer describes this target v1 architecture:
 
 Key references:
 
-- [Software and Monorepo Layout](../vault/10%20Planning/Software%20and%20Monorepo%20Layout.md)
-- [Current Recommended Build](../vault/10%20Planning/Current%20Recommended%20Build.md)
-- [Controller Architecture](../vault/20%20Hardware/Controller%20Architecture.md)
+- [Software and Monorepo Layout](../vault/Planning/Software%20and%20Monorepo%20Layout.md)
+- [Current Recommended Build](../vault/Planning/Current%20Recommended%20Build.md)
+- [Controller Architecture](../vault/Hardware/Controller%20Architecture.md)
 - [Implementation Roadmap](./implementation-roadmap.md)
 
 ## What Is Already Implemented
@@ -107,8 +107,7 @@ Relevant sources:
 ### Backend
 
 - `automation` status is placeholder-only
-- service helpers in `devices/service.py` and `camera/service.py` are thin seeded wrappers
-- configuration includes MQTT and database settings, but there is no corresponding live integration
+- configuration includes MQTT and database settings as future placeholders; there is no corresponding live integration yet
 
 ### Web
 
@@ -131,8 +130,8 @@ Relevant sources:
 
 - [nodes/pi-camera/src/grow_camera/main.py](/home/burket/Git/tentos/nodes/pi-camera/src/grow_camera/main.py)
 - [nodes/pi-camera/src/grow_camera/capture.py](/home/burket/Git/tentos/nodes/pi-camera/src/grow_camera/capture.py)
-- [scripts/sim/fake_controller.py](/home/burket/Git/tentos/scripts/sim/fake_controller.py)
-- [scripts/sim/fake_camera.py](/home/burket/Git/tentos/scripts/sim/fake_camera.py)
+- [scripts/sim/dump_controller_fixture.py](/home/burket/Git/tentos/scripts/sim/dump_controller_fixture.py)
+- [scripts/sim/dump_camera_fixture.py](/home/burket/Git/tentos/scripts/sim/dump_camera_fixture.py)
 
 ## What Is Still Missing
 
@@ -193,9 +192,9 @@ Relevant sources:
 Relevant sources:
 
 - [README.md](/home/burket/Git/tentos/README.md)
-- [docs/vault/20 Hardware/Controller Architecture.md](/home/burket/Git/tentos/docs/vault/20%20Hardware/Controller%20Architecture.md)
-- [docs/vault/10 Planning/Budget Shopping Guide.md](/home/burket/Git/tentos/docs/vault/10%20Planning/Budget%20Shopping%20Guide.md)
-- [docs/vault/50 Parts/Shopping List.md](/home/burket/Git/tentos/docs/vault/50%20Parts/Shopping%20List.md)
+- [docs/vault/Hardware/Controller Architecture.md](/home/burket/Git/tentos/docs/vault/Hardware/Controller%20Architecture.md)
+- [docs/vault/Planning/Budget Shopping Guide.md](/home/burket/Git/tentos/docs/vault/Planning/Budget%20Shopping%20Guide.md)
+- [docs/vault/Parts/Shopping List.md](/home/burket/Git/tentos/docs/vault/Parts/Shopping%20List.md)
 
 ## Recommended Cleanup and Planning Adjustments
 
@@ -230,12 +229,9 @@ Candidates:
 
 If they are not about to be implemented, consider marking them as placeholder or deferred in docs:
 
-- [deploy/compose/home-server/mosquitto.conf](/home/burket/Git/tentos/deploy/compose/home-server/mosquitto.conf)
-- [scripts/sim/fake_controller.py](/home/burket/Git/tentos/scripts/sim/fake_controller.py)
-- [scripts/sim/fake_camera.py](/home/burket/Git/tentos/scripts/sim/fake_camera.py)
+- [scripts/sim/dump_controller_fixture.py](/home/burket/Git/tentos/scripts/sim/dump_controller_fixture.py)
+- [scripts/sim/dump_camera_fixture.py](/home/burket/Git/tentos/scripts/sim/dump_camera_fixture.py)
 - [apps/backend/src/grow_backend/automation/service.py](/home/burket/Git/tentos/apps/backend/src/grow_backend/automation/service.py)
-- [apps/backend/src/grow_backend/devices/service.py](/home/burket/Git/tentos/apps/backend/src/grow_backend/devices/service.py)
-- [apps/backend/src/grow_backend/camera/service.py](/home/burket/Git/tentos/apps/backend/src/grow_backend/camera/service.py)
 
 ## Verification Notes
 

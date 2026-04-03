@@ -2,15 +2,15 @@
 
 This repository holds the software side of the grow project:
 
-- `apps/backend`: home-server API, automation, alerts, and MQTT bridge
+- `apps/backend`: FastAPI API with seeded in-memory data (scaffold for later automation and MQTT)
 - `apps/web`: operator dashboard
 - `firmware/esp32-controller`: PlatformIO firmware for the controller node
 - `nodes/pi-camera`: Raspberry Pi USB camera service
 - `shared/contracts`: protocol definitions shared across services
-- `shared/fixtures`: canonical payloads for tests and simulators
-- `deploy/compose/home-server`: Docker Compose stack for the home server
+- `shared/fixtures`: canonical payloads for tests and fixture dump scripts
+- `deploy/compose/home-server`: Docker Compose stack (`backend` + `web`; no broker in compose yet)
 
-The `docs/vault/` directory remains the planning and documentation layer.
+The `docs/vault/` directory is the planning layer (notes under `Index/`, `Planning/`, `Hardware/`, `Growing/`, `Parts/`). See [`AGENTS.md`](AGENTS.md) for layout and conventions.
 
 ## Quick Start
 
@@ -76,6 +76,6 @@ npm run test:e2e
 
 ## Repo Tasks
 
-The root [`justfile`](/home/burket/Git/tentos/justfile) contains the common local commands for backend, web, firmware, simulators, and Docker Compose.
+The root [`justfile`](/home/burket/Git/tentos/justfile) contains the common local commands for backend, web, firmware, fixture dumps, and Docker Compose.
 
 The Compose stack intentionally exposes only the web tier and runs the backend in seeded mode until database and MQTT integrations are implemented in the application layer.

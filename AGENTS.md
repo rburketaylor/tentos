@@ -1,19 +1,22 @@
 ## Project Scope
 
 - This repo is the grow project software monorepo.
-- `docs/vault/` is the curated planning and documentation layer.
+- `docs/vault/` is the curated planning layer (Obsidian-style notes: `Index/`, `Planning/`, `Hardware/`, `Growing/`, `Parts/`, `Inbox/`).
+- Additional planning and assessments live under `docs/plans/`; KiCad wiring is under `docs/wiring/`.
+- `models/` holds hardware CAD assets (not part of the runtime stack).
 - The code and deployment assets live at the repo root:
-  - `apps/backend`: FastAPI home-server API, automation, alerts, MQTT bridge, and seeded repository data
+  - `apps/backend`: FastAPI API and seeded in-memory repository (scaffold; grow into automation and MQTT later)
   - `apps/web`: React/Vite operator dashboard
   - `firmware/esp32-controller`: PlatformIO firmware for the controller node
   - `nodes/pi-camera`: FastAPI Raspberry Pi camera service
   - `shared/contracts`: protocol source of truth and JSON schemas
-  - `shared/fixtures`: canonical payload examples for tests and simulators
-  - `deploy/compose/home-server`: Docker Compose deployment entry point
+  - `shared/fixtures`: canonical payload examples for tests and fixture dumps
+  - `deploy/compose/home-server`: Docker Compose stack (`backend` + `web` only today; no MQTT broker in compose)
   - `deploy/pi-camera`: Pi deployment notes and env example
   - `deploy/systemd`: service units for Pi or host installs
-  - `scripts/sim`: fake controller and fake camera publishers
+  - `scripts/sim`: print canonical fixture JSON for controller/camera payloads (not MQTT publishers)
   - `tests`: integration, contract, firmware layout, and Playwright E2E coverage
+- Root `package.json`, `playwright.config.ts`, and `tsconfig.playwright.json` drive repo-level E2E; `apps/web` is the npm workspace for the dashboard.
 
 ## Working Rules
 
@@ -30,8 +33,7 @@
   - `__pycache__`
 - Keep changes aligned with the current architecture:
   - backend remains a single Python service with modules separated by concern
-  - MQTT is the machine-to-machine transport boundary
-  - protocol details belong in `shared/contracts` before being duplicated elsewhere
+  - MQTT is the intended machine-to-machine boundary; contracts in `shared/contracts` define topics and payloads before duplicating them elsewhere
   - the Pi camera node stays a first-class v1 component
 
 ## Repo Commands
@@ -44,7 +46,7 @@
 - Run Pi camera service: `just camera`
 - Run web app: `just web`
 - Run home-server compose stack: `just compose`
-- Run simulators: `just sim-controller`, `just sim-camera`
+- Print fixture samples: `just sim-controller`, `just sim-camera`
 - Python tests: `just test-python` or `.venv/bin/pytest`
 - Web tests: `just test-web`
 - E2E tests: `just test-e2e`
@@ -74,6 +76,6 @@
   - outbound links in the edited note
   - inbound links from related notes, indexes, and overview pages
 - Update `Related notes` sections where appropriate.
-- Update index notes such as `docs/vault/01 Index/Home.md` when a note should be discoverable from the main entry points.
-- If a note is moved out of `docs/vault/00 Inbox/`, remove or replace the inbox copy so there is a single canonical version.
+- Update index notes such as `docs/vault/Index/Home.md` when a note should be discoverable from the main entry points.
+- If a note is moved out of `docs/vault/Inbox/`, remove or replace the inbox copy so there is a single canonical version.
 - Before finishing, verify that any `[[wikilinks]]` you added or changed resolve to existing notes and that no obvious orphaned docs were created by the edit.

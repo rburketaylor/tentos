@@ -148,7 +148,7 @@ These were discussed and rejected for this build:
 
 ## Related notes
 
-- [[10 Planning/Current Recommended Build]]
-- [[20 Hardware/Controller Architecture]]
-- [[20 Hardware/Power and Protection]]
-- [[30 Growing/Tent Build and Safety]]
+- [[Planning/Current Recommended Build]]
+- [[Hardware/Controller Architecture]]
+- [[Hardware/Power and Protection]]
+- [[Growing/Tent Build and Safety]]

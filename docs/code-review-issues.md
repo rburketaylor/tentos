@@ -131,8 +131,8 @@ Medium-high.
 ## 5. Simulator Scripts Still Depend on Running from Repo Root
 
 **Files**
-- [scripts/sim/fake_controller.py](/home/burket/Git/tentos/scripts/sim/fake_controller.py)
-- [scripts/sim/fake_camera.py](/home/burket/Git/tentos/scripts/sim/fake_camera.py)
+- [scripts/sim/dump_controller_fixture.py](/home/burket/Git/tentos/scripts/sim/dump_controller_fixture.py)
+- [scripts/sim/dump_camera_fixture.py](/home/burket/Git/tentos/scripts/sim/dump_camera_fixture.py)
 
 **Why it matters**
 

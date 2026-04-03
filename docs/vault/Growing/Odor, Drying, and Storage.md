@@ -33,5 +33,5 @@ region: CA
 
 ## Related notes
 
-- [[30 Growing/Environment Targets]]
-- [[30 Growing/Tent Build and Safety]]
+- [[Growing/Environment Targets]]
+- [[Growing/Tent Build and Safety]]

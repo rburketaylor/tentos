@@ -36,6 +36,6 @@ region: CA
 
 ## Related notes
 
-- [[30 Growing/Odor, Drying, and Storage]]
-- [[30 Growing/Tent Build and Safety]]
-- [[10 Planning/Current Recommended Build]]
+- [[Growing/Odor, Drying, and Storage]]
+- [[Growing/Tent Build and Safety]]
+- [[Planning/Current Recommended Build]]

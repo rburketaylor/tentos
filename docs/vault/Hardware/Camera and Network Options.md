@@ -68,6 +68,6 @@ This is the cheapest clean option when you already own the router.
 
 ## Related notes
 
-- [[10 Planning/Software and Monorepo Layout]]
-- [[20 Hardware/Controller Architecture]]
-- [[10 Planning/Budget Shopping Guide]]
+- [[Planning/Software and Monorepo Layout]]
+- [[Hardware/Controller Architecture]]
+- [[Planning/Budget Shopping Guide]]
