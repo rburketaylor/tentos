@@ -428,9 +428,6 @@ void setup() {
   Serial.begin(115200);
   delay(250);
   Serial.println(grow::bootMessage().c_str());
-  pinMode(
-      grow::config::kRelayPin,
-      relayIdleLevel() == HIGH ? INPUT_PULLUP : INPUT_PULLDOWN);
   digitalWrite(grow::config::kRelayPin, relayIdleLevel());
   pinMode(grow::config::kRelayPin, OUTPUT);
   pinMode(grow::config::kSensorPin, INPUT);
