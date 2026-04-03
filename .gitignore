@@ -44,6 +44,7 @@ fp-info-cache
 
 # Local IDE state
 .vscode/
+.claude/
 
 # Obsidian local state
 docs/vault/.obsidian/workspace.json

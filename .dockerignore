@@ -1,7 +1,6 @@
 # Git and tooling
 .git
 .github
-.cursor
 .kilo
 **/.venv
 **/venv
