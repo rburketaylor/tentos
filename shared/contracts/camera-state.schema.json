@@ -7,7 +7,7 @@
     "camera_id": { "type": "string" },
     "status": { "enum": ["online", "offline", "degraded"] },
     "stream_url": { "type": "string", "format": "uri" },
-    "snapshot_url": { "type": "string", "format": "uri" },
+    "last_snapshot_url": { "type": "string", "format": "uri" },
     "timestamp": { "type": "string", "format": "date-time" }
   },
   "additionalProperties": false

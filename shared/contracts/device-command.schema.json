@@ -5,7 +5,7 @@
   "required": ["node_id", "command", "issued_at"],
   "properties": {
     "node_id": { "type": "string" },
-    "command": { "enum": ["pump_on", "pump_off", "refresh_schedule"] },
+    "command": { "enum": ["light_on", "light_off", "pump_on", "pump_off", "refresh_schedule"] },
     "duration_seconds": { "type": "integer", "minimum": 0 },
     "issued_at": { "type": "string", "format": "date-time" }
   },
