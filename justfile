@@ -22,10 +22,10 @@ compose:
     docker compose --env-file deploy/compose/home-server/.env.example -f deploy/compose/home-server/docker-compose.yml up --build
 
 sim-controller:
-    python scripts/sim/fake_controller.py
+    python scripts/sim/dump_controller_fixture.py
 
 sim-camera:
-    python scripts/sim/fake_camera.py
+    python scripts/sim/dump_camera_fixture.py
 
 test-python:
     .venv/bin/pytest

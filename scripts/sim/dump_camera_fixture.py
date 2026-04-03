@@ -7,7 +7,7 @@ from pathlib import Path
 def main() -> None:
     fixture = Path("shared/fixtures/camera-state.json")
     payload = json.loads(fixture.read_text())
-    print("Simulated camera state")
+    print("Fixture: shared/fixtures/camera-state.json")
     print(json.dumps(payload, indent=2))
 
 

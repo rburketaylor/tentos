@@ -7,7 +7,7 @@ from pathlib import Path
 def main() -> None:
     fixture = Path("shared/fixtures/device-telemetry.json")
     payload = json.loads(fixture.read_text())
-    print("Simulated controller telemetry")
+    print("Fixture: shared/fixtures/device-telemetry.json")
     print(json.dumps(payload, indent=2))
 
 
