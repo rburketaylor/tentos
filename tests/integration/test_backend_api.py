@@ -15,11 +15,11 @@ def load_json(path: str):
 
 
 def test_healthcheck():
-    response = client.get("/health")
+    response = client.get("/api/v1/health")
 
     assert response.status_code == 200
-    assert response.json()["service"] == "backend"
     assert response.json()["repository_mode"] == "seeded"
+    assert "summary" in response.json()
 
 
 def test_resource_endpoints_return_seeded_data_and_match_contracts():
