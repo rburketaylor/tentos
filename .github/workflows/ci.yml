@@ -12,6 +12,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: |
+            pyproject.toml
+            apps/backend/pyproject.toml
+            nodes/pi-camera/pyproject.toml
       - name: Install Python dependencies
         run: python -m pip install -e '.[dev]' -e apps/backend -e nodes/pi-camera
       - name: Run Python tests
@@ -24,12 +29,30 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Install web dependencies
-        run: npm install
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Install dependencies
+        run: npm ci
       - name: Run web tests
         run: npm run test:web
+      - name: Typecheck web
+        run: npm run typecheck:web
       - name: Build web app
         run: npm run build:web
+
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Install dependencies
+        run: npm ci
+      - name: Typecheck E2E harness
+        run: npm run typecheck:e2e
       - name: Install Playwright browser
         run: npx playwright install --with-deps chromium
       - name: Run E2E smoke
@@ -42,6 +65,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
       - name: Install PlatformIO
         run: python -m pip install platformio
       - name: Build ESP32 firmware
